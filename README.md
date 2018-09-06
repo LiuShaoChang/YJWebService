@@ -48,6 +48,7 @@ This is a network library based on AFNetWorking,it's also my exploration of POP(
 * Delegate callback and Block callback
 
 ## 中文说明
+这是一个基于AFNetWorking的二次封装,同时也是我对"POP"面向协议设计模式的一种探索.
 ## 使用
 1. 设置baseURL以及validateDelegate(validateDelegate可以不设置,但是如果你设置的话,你可以根据你们项目的需求在该类中做些校检,以及错误处理)
 ```
@@ -87,3 +88,11 @@ This is a network library based on AFNetWorking,it's also my exploration of POP(
 [self.drequest cancel];
 ```
 5. 更多详情请参考demo
+## 特点
+* 面向协议设计模式
+* 高拓展
+* 设置统一的baseURL
+* 取消请求
+* 代理回调和Block回调
+
+
