@@ -11,7 +11,7 @@
 @implementation DemoRequest
 
 - (id)requestParams {
-    return @{@"username":@(13803544685),@"password":@(666666),@"ostype":@"1",@"description":@"222",@"devicetoken":@"  "};
+    return @{};
 }
 
 - (YJAPIRequstType)requestType {

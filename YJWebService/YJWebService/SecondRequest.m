@@ -13,7 +13,7 @@
 
 
 - (id)requestParams {
-    NSMutableDictionary *param = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"get_report_list",@"action",_stucuid,@"user_id", nil];
+    NSMutableDictionary *param = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"get",@"action",_stucuid,@"user_id", nil];
     if (_gradeid) {
         [param setObject:_gradeid forKey:@"grade_id"];
     }
