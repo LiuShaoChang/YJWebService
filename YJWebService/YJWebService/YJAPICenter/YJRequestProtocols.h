@@ -62,7 +62,6 @@ typedef void(^YJRequestCompletionBlock)(__kindof YJBaseRequest *request);
 - (BOOL)allowCellularAccess;
 - (NSArray *)authorizationHeaderFieldWithUsernameAndPassword;
 - (NSDictionary<NSString *, NSString *> *)requestHeaderFieldValueDictionary;
-- (NSString *)resumableDownloadPath;
 
 @end
 

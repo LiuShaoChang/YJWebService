@@ -81,15 +81,7 @@ static NSString * const PATCH = @"PUT";
 
 - (void)cancelRequest:(YJBaseRequest *)request {
     NSAssert(request != nil, @"request should not be nil");
-    if ([(id<YJRequestBaseDelegate>)request respondsToSelector:@selector(resumableDownloadPath)]) {
-        NSURLSessionDownloadTask *downloadTask = (NSURLSessionDownloadTask *)request.requestTask;
-        [downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
-            NSURL *url = [self incompleteDownloadTempPathForDownloadPath:[(id<YJRequestBaseDelegate>)request resumableDownloadPath]];
-            [resumeData writeToURL:url atomically:YES];
-        }];
-    }else {
-        [request.requestTask cancel];
-    }
+    [request.requestTask cancel];
     [self removeRequestFromRequestTable:request];
     
 }
@@ -127,11 +119,7 @@ static NSString * const PATCH = @"PUT";
     
     switch (requestType) {
         case YJAPIRequstTypeGet:
-            if ([(id<YJRequestBaseDelegate>)request respondsToSelector:@selector(resumableDownloadPath)]) {
-                return [self downloadTaskWithDownloadPath:[(id<YJRequestBaseDelegate>)request resumableDownloadPath] requestSerializer:requestSerializer URLString:urlString parameters:params downloadProgress:request.progressBlock error:error];
-            }else {
-                return [self dataTaskWithRequestSerializer:requestSerializer method:GET URLString:urlString parameters:params error:error];
-            }
+            return [self dataTaskWithRequestSerializer:requestSerializer method:GET URLString:urlString parameters:params error:error];
         case YJAPIRequstTypePost:
             return [self dataTaskWithRequestSerializer:requestSerializer method:POST URLString:urlString parameters:params error:error];
         case YJAPIRequstTypePut:
@@ -209,20 +197,6 @@ static NSString * const PATCH = @"PUT";
     return dataTask;
     
 }
-
-- (NSURLSessionDownloadTask *)downloadTaskWithDownloadPath:(NSString *)downloadPath
-                                         requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
-                                                 URLString:(NSString *)URLString
-                                                parameters:(nullable id)parameters
-                                                  downloadProgress:(nullable void (^)(NSProgress *downloadProgress))downloadProgressBlock
-                                                     error:(NSError * _Nullable __autoreleasing *)error {
-    
-    NSURLSessionDownloadTask *downloadTask = nil;
-    // 预留
-    return downloadTask;
-    
-}
-
 
 - (void)handleDataTaskResponse:(NSURLSessionDataTask *)dataTask
                    urlResponse:(NSURLResponse *_Nonnull)response
