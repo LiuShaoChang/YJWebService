@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, YJResponseSerializerType) {
 };
 
 #pragma mark - BLOCK
-@class YJBaseRequest;
+@class YJBaseRequest,YJBatchRequest;
 typedef void(^YJURLSessionTaskProgressBlock)(NSProgress *progress);
 typedef void(^YJRequestCompletionBlock)(__kindof YJBaseRequest *request);
 
@@ -82,6 +82,17 @@ typedef void(^YJRequestCompletionBlock)(__kindof YJBaseRequest *request);
 
 @optional
 - (BOOL)validateWithRequest:(YJBaseRequest *)request validateError:(NSError * _Nullable __autoreleasing *)validateError;
+
+@end
+
+#pragma mark - YJBatchRequestCallBackDelegate
+@protocol YJBatchRequestCallBackDelegate <NSObject>
+
+@optional
+- (void)batchRequestWillStart:(YJBatchRequest *)batchRequest;
+- (void)batchRequestDidStarted:(YJBatchRequest *)batchRequest;
+- (void)batchRequestDidSuccess:(YJBatchRequest *)batchRequest;
+- (void)batchRequestDidFailed:(YJBatchRequest *)batchRequest;
 
 @end
 

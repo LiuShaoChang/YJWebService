@@ -25,6 +25,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.nextBtn];
+    
+    
     NSLog(@"%@", kBaseUrl);
     [self.drequest start];
     

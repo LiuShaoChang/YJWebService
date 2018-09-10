@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		800D82FA21368743001D7414 /* YJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D82F921368743001D7414 /* YJBaseRequest.m */; };
 		8036D05321378CA500C5B218 /* YJRequestProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8036D05221378CA500C5B218 /* YJRequestProxy.m */; };
+		80502EB021426F1000ADE066 /* YJBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80502EAF21426F1000ADE066 /* YJBatchRequest.m */; };
 		8050815A213F68CB009D4B1E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80508159213F68CB009D4B1E /* SecondViewController.m */; };
 		8050815D213F6919009D4B1E /* SecondRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8050815C213F6919009D4B1E /* SecondRequest.m */; };
 		80508161213FC30F009D4B1E /* YJRequestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 80508160213FC30F009D4B1E /* YJRequestParser.m */; };
@@ -33,6 +34,8 @@
 		8036D05121378CA500C5B218 /* YJRequestProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJRequestProxy.h; sourceTree = "<group>"; };
 		8036D05221378CA500C5B218 /* YJRequestProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJRequestProxy.m; sourceTree = "<group>"; };
 		8036D0542137D07100C5B218 /* YJRequestProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJRequestProtocols.h; sourceTree = "<group>"; };
+		80502EAE21426F1000ADE066 /* YJBatchRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJBatchRequest.h; sourceTree = "<group>"; };
+		80502EAF21426F1000ADE066 /* YJBatchRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJBatchRequest.m; sourceTree = "<group>"; };
 		80508158213F68CB009D4B1E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		80508159213F68CB009D4B1E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8050815B213F6919009D4B1E /* SecondRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondRequest.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				800D82F921368743001D7414 /* YJBaseRequest.m */,
 				8036D05121378CA500C5B218 /* YJRequestProxy.h */,
 				8036D05221378CA500C5B218 /* YJRequestProxy.m */,
+				80502EAE21426F1000ADE066 /* YJBatchRequest.h */,
+				80502EAF21426F1000ADE066 /* YJBatchRequest.m */,
 				80FDDC31213A73AE00AAAE59 /* YJRequestDefaultConfig.h */,
 				80FDDC32213A73AE00AAAE59 /* YJRequestDefaultConfig.m */,
 				80B4AAB52139332300CC9367 /* YJRequestHelper.h */,
@@ -252,6 +257,7 @@
 				80FDDC33213A73AE00AAAE59 /* YJRequestDefaultConfig.m in Sources */,
 				80B4AAB72139332300CC9367 /* YJRequestHelper.m in Sources */,
 				80ACB3EF213E61150023CA69 /* YJRequestValidator.m in Sources */,
+				80502EB021426F1000ADE066 /* YJBatchRequest.m in Sources */,
 				8036D05321378CA500C5B218 /* YJRequestProxy.m in Sources */,
 				807FF44620FF22410038C23C /* main.m in Sources */,
 				8077999D213D338E00CC2ED1 /* DemoRequest.m in Sources */,
